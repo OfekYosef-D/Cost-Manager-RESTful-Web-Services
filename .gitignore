@@ -3,6 +3,7 @@ node_modules/
 **/node_modules/
 package-lock.json
 **/package-lock.json
+# Note: package-lock.json files are ignored but may have been committed before .gitignore was updated
 
 # Environment variables - NEVER commit credentials!
 .env
@@ -75,3 +76,8 @@ SUBMISSION_GUIDE.md
 TESTING_GUIDE.md
 VERIFICATION_REPORT.md
 AUDIT_REPORT.md
+
+# Scripts and test files (not needed in repository)
+scripts/
+tests/
+test_project.py
