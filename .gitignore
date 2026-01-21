@@ -1,6 +1,68 @@
+# Dependencies
 node_modules/
-.env
-*.log
-.DS_Store
-*.zip
+**/node_modules/
+package-lock.json
+**/package-lock.json
 
+# Environment variables - NEVER commit credentials!
+.env
+.env.local
+.env.*.local
+*.env
+
+# Logs
+*.log
+logs/
+*.log.*
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# Test output and temporary files
+test_output.txt
+*.tmp
+*.temp
+coverage/
+.nyc_output/
+
+# Build and dist files
+dist/
+build/
+*.zip
+*.tar.gz
+
+# Personal scripts (not part of the project)
+check_chat_history.ps1
+find_workspace.ps1
+recover_chat_history.ps1
+
+# MongoDB data (if running locally)
+data/
+*.db
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Keep env.template - this should be in Git!
+!env.template
