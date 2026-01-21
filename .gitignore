@@ -1,4 +1,4 @@
-# Dependencies
+יתי# Dependencies
 node_modules/
 **/node_modules/
 package-lock.json
@@ -66,3 +66,12 @@ data/
 
 # Keep env.template - this should be in Git!
 !env.template
+
+# Documentation files (not needed in repository)
+DEPLOYMENT_GUIDE.md
+GITHUB_SETUP.md
+CODE_COMPARISON_REPORT.md
+SUBMISSION_GUIDE.md
+TESTING_GUIDE.md
+VERIFICATION_REPORT.md
+AUDIT_REPORT.md
