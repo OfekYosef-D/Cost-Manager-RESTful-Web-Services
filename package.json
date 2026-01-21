@@ -6,10 +6,7 @@
         "start:logs": "cd logs_service && npm start",
         "start:users": "cd users_service && npm start",
         "start:costs": "cd costs_service && npm start",
-        "start:admin": "cd admin_service && npm start",
-        "init-db": "node scripts/init_database.js",
-        "clean-db": "node scripts/clean_database.js",
-        "test": "node tests/run_tests.js"
+        "start:admin": "cd admin_service && npm start"
     },
     "keywords": [
         "microservices",
