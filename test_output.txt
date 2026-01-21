@@ -1,0 +1,38 @@
+logs_service_url=http://localhost:3001
+users_service_url=http://localhost:3002
+costs_service_url=http://localhost:3003
+admin_service_url=http://localhost:3004
+
+testing getting the about
+-------------------------
+url=http://localhost:3004/api/about/
+data.status_code=200
+b'[{"first_name":"Ofek","last_name":"Yosef"},{"first_name":"Sharon","last_name":"Barshishat"}]'
+data.text=[{"first_name":"Ofek","last_name":"Yosef"},{"first_name":"Sharon","last_name":"Barshishat"}]
+[{'first_name': 'Ofek', 'last_name': 'Yosef'}, {'first_name': 'Sharon', 'last_name': 'Barshishat'}]
+
+
+testing getting the report - 1
+------------------------------
+url=http://localhost:3003/api/report/?id=123123&year=2026&month=1
+data.status_code=200
+b'{"userid":123123,"year":2026,"month":1,"costs":[{"food":[{"sum":50.5,"description":"Test cost","day":21}]},{"health":[]},{"housing":[]},{"sports":[]},{"education":[]}]}'
+data.text={"userid":123123,"year":2026,"month":1,"costs":[{"food":[{"sum":50.5,"description":"Test cost","day":21}]},{"health":[]},{"housing":[]},{"sports":[]},{"education":[]}]}
+
+
+
+testing adding cost item
+----------------------------------
+url=http://localhost:3003/api/add/
+data.status_code=201
+b'{"description":"milk 9","category":"food","userid":123123,"sum":8,"date":"2026-01-21T19:58:04.770Z"}'
+
+
+testing getting the report - 2
+------------------------------
+url=http://localhost:3003/api/report/?id=123123&year=2026&month=1
+data.status_code=200
+b'{"userid":123123,"year":2026,"month":1,"costs":[{"food":[{"sum":50.5,"description":"Test cost","day":21},{"sum":8,"description":"milk 9","day":21}]},{"health":[]},{"housing":[]},{"sports":[]},{"education":[]}]}'
+data.text={"userid":123123,"year":2026,"month":1,"costs":[{"food":[{"sum":50.5,"description":"Test cost","day":21},{"sum":8,"description":"milk 9","day":21}]},{"health":[]},{"housing":[]},{"sports":[]},{"education":[]}]}
+
+
